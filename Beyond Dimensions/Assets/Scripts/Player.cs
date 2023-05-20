@@ -18,8 +18,12 @@ public class Player : MonoBehaviour {
     BoxCollider2D feetCollider;
     float gravityScaleAtStart;
     bool isAlive = true;
+    DimensionController dimensionController;
 
-
+    void Awake()
+    {
+        dimensionController = FindObjectOfType<DimensionController>();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -92,6 +96,14 @@ public class Player : MonoBehaviour {
             playerAnimator.SetTrigger("Death");
             rb.velocity = death;
             
+        }
+    }
+
+    void OnDimension()
+    {
+        if (isAlive)
+        {
+            dimensionController.SetBlackDimension();
         }
     }
 
