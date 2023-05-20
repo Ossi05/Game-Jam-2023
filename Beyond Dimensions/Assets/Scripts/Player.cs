@@ -9,6 +9,9 @@ public class Player : MonoBehaviour {
     [SerializeField] float runSpeed = 10f;
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] Vector2 death = new Vector2(20f, 20f);
+    [Header("Bullet")]
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform bulletSpawn;
 
 
     Vector2 moveInput;
@@ -76,6 +79,13 @@ public class Player : MonoBehaviour {
         playerAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
     }
 
+    void OnFire(InputValue value)
+    {
+        if (isAlive)
+        {
+            Instantiate(bullet, bulletSpawn.position, transform.rotation);
+        }
+    }
     void FlipPlayer()
     {
         bool playerHasHorizontalSpeed = Mathf.Abs(rb.velocity.x) > Mathf.Epsilon;
@@ -103,7 +113,7 @@ public class Player : MonoBehaviour {
     {
         if (isAlive)
         {
-            dimensionController.SetBlackDimension();
+            dimensionController.ChangeDimension();
         }
     }
 
