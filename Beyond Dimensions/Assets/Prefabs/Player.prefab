@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 1760399137}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 10
   jumpSpeed: 25
-  death: {x: 20, y: 20}
+  death: {x: 30, y: 40}
   bullet: {fileID: 8942332692086556017, guid: 64151d56f014806478ec18c3ce92acca, type: 3}
   bulletSpawn: {fileID: 6246025783514437538}
 --- !u!61 &1760399137
