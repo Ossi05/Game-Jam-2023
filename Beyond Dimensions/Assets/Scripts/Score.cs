@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Score : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI scoreText;
     int score = 0;
-    
+
+    private void Awake()
+    {
+        scoreText.text = "Score: 0";
+    }
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
-        Debug.Log(score);
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public int GetScore()
@@ -21,4 +26,6 @@ public class Score : MonoBehaviour
     {
         score = 0;
     }
+    
+
 }
