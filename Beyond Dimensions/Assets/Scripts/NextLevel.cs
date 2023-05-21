@@ -15,6 +15,7 @@ public class NextLevel : MonoBehaviour
         }
     }
 
+
     IEnumerator LoadNextLevel()
     {   
         yield return new WaitForSecondsRealtime(exitTime);

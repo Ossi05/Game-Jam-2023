@@ -22,10 +22,12 @@ public class Player : MonoBehaviour {
     float gravityScaleAtStart;
     bool isAlive = true;
     DimensionController dimensionController;
+    GameSession gameSession;
 
     void Awake()
     {
         dimensionController = FindObjectOfType<DimensionController>();
+        gameSession = FindObjectOfType<GameSession>();
     }
     void Start()
     {
@@ -34,7 +36,6 @@ public class Player : MonoBehaviour {
         bodyCollider = GetComponent<CapsuleCollider2D>();
         gravityScaleAtStart = rb.gravityScale;
         feetCollider = GetComponent<BoxCollider2D>();
-
 
     }
 
@@ -105,8 +106,16 @@ public class Player : MonoBehaviour {
 
             playerAnimator.SetTrigger("Death");
             rb.velocity = death;
-            
+            StartCoroutine(DelayedPlayerDeath());
+
         }
+    }
+
+    IEnumerator DelayedPlayerDeath()
+    {   
+        yield return new WaitForSecondsRealtime(1);
+        gameSession.PlayerDeath();
+        
     }
 
     void OnDimension()
