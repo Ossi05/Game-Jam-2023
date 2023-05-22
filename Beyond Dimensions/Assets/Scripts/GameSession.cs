@@ -9,6 +9,7 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] TextMeshProUGUI livesText;
+    
     void Awake()
     {
         livesText.text = "Lives: " + playerLives.ToString();
@@ -26,7 +27,7 @@ public class GameSession : MonoBehaviour
     
 
     public void PlayerDeath()
-    {   
+    {
         
         if (playerLives > 1)
         {
@@ -36,6 +37,7 @@ public class GameSession : MonoBehaviour
         {
             ResetGameSession();
         }
+        
     }
 
     void TakeLife()
@@ -44,12 +46,15 @@ public class GameSession : MonoBehaviour
         livesText.text = "Lives: " + playerLives.ToString();
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
+        
     }
     void ResetGameSession()
     {
-        FindObjectOfType<SaveItemState>().ResetScenePersist();
+        
+        FindObjectOfType<SaveItemState>().ResetScene();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+        
     }
 
     public void AddHealth(int health)

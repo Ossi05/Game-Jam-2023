@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2636532903046617239}
   - component: {fileID: 2636532903046617238}
   m_Layer: 9
-  m_Name: BlackEnemy
+  m_Name: WhiteEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2636532903046617241}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5347605, y: -9.752378, z: 0.15818524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -990927610, guid: d16a4be7373b4f345b19fadcb78e6c3b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -123,8 +123,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010472536, y: 0.012565434}
-  m_Size: {x: 0.60899067, y: 0.60899067}
+  m_Offset: {x: 0.003658861, y: 0.03376937}
+  m_Size: {x: 0.6530604, y: 0.65306044}
   m_Direction: 0
 --- !u!95 &2636532903046617240
 Animator:
@@ -173,16 +173,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.42033163, y: -0.23480743}
+  m_Offset: {x: 0.42481932, y: -0.26418796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.75, y: 0.75}
+    oldSize: {x: 0.8, y: 0.8}
     newSize: {x: 0.75, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05254239, y: 0.43608463}
+  m_Size: {x: 0.01918155, y: 0.7840391}
   m_EdgeRadius: 0

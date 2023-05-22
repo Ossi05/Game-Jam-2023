@@ -25,6 +25,7 @@ public class NextLevel : MonoBehaviour
         {
             nextSceneIndex = 0;
         }
+        FindObjectOfType<SaveItemState>().ResetScene();
         SceneManager.LoadScene(nextSceneIndex);
     }
 }

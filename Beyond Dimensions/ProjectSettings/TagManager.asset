@@ -18,7 +18,7 @@ TagManager:
   - Enemies
   - Bullets
   - Spikes
-  - 
+  - WorldBorder
   - 
   - 
   - 
@@ -41,6 +41,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tiles
+    uniqueID: 3780316157
+    locked: 0
+  - name: Spikes
+    uniqueID: 2666686613
     locked: 0
   - name: Enemies
     uniqueID: 2168302429

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1608168863048160422}
   - component: {fileID: 1608168863048160421}
   m_Layer: 11
-  m_Name: BlackSpike
+  m_Name: WhiteSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,10 +97,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1628280683
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 11634771, guid: c00ca61276fbd754791d4fd06c31914e, type: 3}
+  m_Sprite: {fileID: -971849123, guid: d16a4be7373b4f345b19fadcb78e6c3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

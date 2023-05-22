@@ -22,7 +22,7 @@ public class SaveItemState : MonoBehaviour
         }
     }
 
-    public void ResetScenePersist()
+    public void ResetScene()
     {
         Destroy(gameObject);
     }
