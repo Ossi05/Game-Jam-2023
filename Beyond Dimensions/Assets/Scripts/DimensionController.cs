@@ -18,9 +18,11 @@ public class DimensionController : MonoBehaviour {
 
 
     public void ChangeDimension()
-    {   
+    {
         SaveItemState saveItemState = FindObjectOfType<SaveItemState>();
         blackDimension = !blackDimension;
+
+        
         if (blackDimension)
         {
             
@@ -43,6 +45,10 @@ public class DimensionController : MonoBehaviour {
         }
     }
 
+    public bool GetDimension()
+    {   
+        return blackDimension;
+    }
 }
     
 

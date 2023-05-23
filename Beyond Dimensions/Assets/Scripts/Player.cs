@@ -23,11 +23,13 @@ public class Player : MonoBehaviour {
     bool isAlive = true;
     DimensionController dimensionController;
     GameSession gameSession;
+    Audio audioManager;
 
     void Awake()
     {
         dimensionController = FindObjectOfType<DimensionController>();
         gameSession = FindObjectOfType<GameSession>();
+        audioManager = FindObjectOfType<Audio>();
     }
     void Start()
     {
@@ -83,7 +85,8 @@ public class Player : MonoBehaviour {
     void OnFire(InputValue value)
     {
         if (isAlive)
-        {
+        {   
+            audioManager.PlayShootSound();
             Instantiate(bullet, bulletSpawn.position, transform.rotation);
         }
     }

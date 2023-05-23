@@ -8,6 +8,12 @@ public class Bullet : MonoBehaviour
     Rigidbody2D rb;
     Player player;
     float speed;
+    Effects effects;
+
+    private void Awake()
+    {
+        effects = FindObjectOfType<Effects>();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,7 +31,8 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
-        {
+        {   
+            effects.PlayExplosion(collision.transform);
             Destroy(collision.gameObject);
         }
         Destroy(gameObject);
@@ -35,4 +42,5 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 }
