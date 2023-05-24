@@ -9,10 +9,16 @@ public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] TextMeshProUGUI livesText;
+    Score score;
     
     void Awake()
-    {
-        livesText.text = "Lives: " + playerLives.ToString();
+    {      
+        score = FindObjectOfType<Score>();
+        if (livesText != null)
+        {
+            livesText.text = "Lives: " + playerLives.ToString();
+        }
+        
         int gameSessions = FindObjectsOfType<GameSession>().Length;
         if (gameSessions > 1)
         {
@@ -52,7 +58,7 @@ public class GameSession : MonoBehaviour
     {
         
         FindObjectOfType<SaveItemState>().ResetScene();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
         Destroy(gameObject);
         
     }
@@ -61,6 +67,29 @@ public class GameSession : MonoBehaviour
     {
         playerLives += health;
         livesText.text = "Lives: " + playerLives.ToString();
+    }
+
+    public void ResetGame()
+    {   
+        
+        
+        if (livesText != null)
+        {
+            playerLives = 3;
+            livesText.text = "Lives: " + playerLives.ToString();
+        }
+        
+        if (score != null)
+        {
+            score.ResetScore();
+        }
+        SaveItemState saveItemState = FindObjectOfType<SaveItemState>();
+
+        if (saveItemState != null)
+        {
+            saveItemState.ResetScene();
+        }
+        Destroy(gameObject);
     }
 
 }

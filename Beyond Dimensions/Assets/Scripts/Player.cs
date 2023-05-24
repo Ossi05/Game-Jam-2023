@@ -24,12 +24,14 @@ public class Player : MonoBehaviour {
     DimensionController dimensionController;
     GameSession gameSession;
     Audio audioManager;
+    Buttons buttons;
 
     void Awake()
     {
         dimensionController = FindObjectOfType<DimensionController>();
         gameSession = FindObjectOfType<GameSession>();
         audioManager = FindObjectOfType<Audio>();
+        buttons = FindObjectOfType<Buttons>();
     }
     void Start()
     {
@@ -127,6 +129,11 @@ public class Player : MonoBehaviour {
         {
             dimensionController.ChangeDimension();
         }
+    }
+
+    void OnMenu()
+    {   
+        buttons.HideMenu();
     }
 
 }

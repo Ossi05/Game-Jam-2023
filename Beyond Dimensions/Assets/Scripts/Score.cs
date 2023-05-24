@@ -11,6 +11,7 @@ public class Score : MonoBehaviour
     {
         scoreText.text = "Score: 0";
     }
+
     public void AddToScore(int pointsToAdd)
     {
         score += pointsToAdd;
@@ -25,6 +26,7 @@ public class Score : MonoBehaviour
     public void ResetScore()
     {
         score = 0;
+        scoreText.text = "Score: " + score.ToString();
     }
     
 

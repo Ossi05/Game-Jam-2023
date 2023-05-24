@@ -14,14 +14,27 @@ public class Audio : MonoBehaviour
     [SerializeField] float volume = 1f;
 
     AudioSource audioSource;
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
+    static Audio instance;
 
+    void Awake()
+    {
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        audioSource = GetComponent<AudioSource>();
     }
 
+
     public void PlayShootSound()
-    {
+    {   
         PlayAudio(shootSound, volume);
     }
 
@@ -48,7 +61,10 @@ public class Audio : MonoBehaviour
     void PlayAudio(AudioClip audioClip, float volume)
     {   
         if (audioClip != null)
-        {
+        {   if(audioSource == null)
+            {
+                audioSource = GetComponent<AudioSource>();
+            }
             audioSource.PlayOneShot(audioClip);
         }
         
