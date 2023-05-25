@@ -19,7 +19,7 @@ TagManager:
   - Bullets
   - Spikes
   - WorldBorder
-  - 
+  - Items
   - 
   - 
   - 
@@ -39,11 +39,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Tiles
     uniqueID: 3780316157
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Spikes
     uniqueID: 2666686613

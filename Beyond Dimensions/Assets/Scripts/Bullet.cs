@@ -5,14 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 20f;
+    [SerializeField] float timeAlive = 5f;
     Rigidbody2D rb;
     Player player;
     float speed;
     Effects effects;
+    Audio audioManager;
 
     private void Awake()
     {
         effects = FindObjectOfType<Effects>();
+        audioManager = FindObjectOfType<Audio>();
     }
     void Start()
     {
@@ -25,6 +28,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         rb.velocity = new Vector2(speed, 0f);
+        Destroy(gameObject, timeAlive);
 
     }
 
@@ -32,6 +36,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {   
+            audioManager.PlayKillSound();
             effects.PlayExplosion(collision.transform);
             Destroy(collision.gameObject);
         }

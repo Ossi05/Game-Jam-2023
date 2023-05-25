@@ -63,6 +63,18 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2636532903046617237, guid: e1bc06cd4045c1049bfed02c1bfebe7f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636532903046617237, guid: e1bc06cd4045c1049bfed02c1bfebe7f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636532903046617237, guid: e1bc06cd4045c1049bfed02c1bfebe7f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2126664867
+      objectReference: {fileID: 0}
     - target: {fileID: 2636532903046617241, guid: e1bc06cd4045c1049bfed02c1bfebe7f, type: 3}
       propertyPath: m_Name
       value: BlackEnemy

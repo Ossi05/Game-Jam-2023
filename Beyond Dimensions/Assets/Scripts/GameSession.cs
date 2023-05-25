@@ -10,10 +10,11 @@ public class GameSession : MonoBehaviour
     [SerializeField] int playerLives = 3;
     [SerializeField] TextMeshProUGUI livesText;
     Score score;
+
     
     void Awake()
     {      
-        score = FindObjectOfType<Score>();
+        score = FindObjectOfType<Score>();  
         if (livesText != null)
         {
             livesText.text = "Lives: " + playerLives.ToString();
@@ -34,6 +35,7 @@ public class GameSession : MonoBehaviour
 
     public void PlayerDeath()
     {
+    
         
         if (playerLives > 1)
         {
@@ -44,6 +46,7 @@ public class GameSession : MonoBehaviour
             ResetGameSession();
         }
         
+
     }
 
     void TakeLife()

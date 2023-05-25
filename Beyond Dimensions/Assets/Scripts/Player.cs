@@ -71,6 +71,11 @@ public class Player : MonoBehaviour {
         }
         if (feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")) && value.isPressed)
         {
+            FindAudioManager();
+            if (audioManager != null)
+            {
+                audioManager.PlayJumpSound();
+            }
             rb.velocity += new Vector2(0f, jumpSpeed);
         }
     }
@@ -87,8 +92,14 @@ public class Player : MonoBehaviour {
     void OnFire(InputValue value)
     {
         if (isAlive)
-        {   
-            audioManager.PlayShootSound();
+        {
+            FindAudioManager();
+
+            if (audioManager != null)
+            {
+                audioManager.PlayShootSound();
+            }
+            
             Instantiate(bullet, bulletSpawn.position, transform.rotation);
         }
     }
@@ -108,7 +119,12 @@ public class Player : MonoBehaviour {
         if (bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Spikes")) )
         {
             isAlive = false;
-
+            FindAudioManager();
+            if (audioManager != null)
+            {
+                audioManager.PlayDeathSound();
+            }
+            
             playerAnimator.SetTrigger("Death");
             rb.velocity = death;
             StartCoroutine(DelayedPlayerDeath());
@@ -136,4 +152,16 @@ public class Player : MonoBehaviour {
         buttons.HideMenu();
     }
 
+    void FindAudioManager()
+    {
+        if (audioManager == null)
+        {
+            audioManager = FindObjectOfType<Audio>();
+        }
+    }
+
+    public bool GetIsAlive()
+    {
+        return isAlive;
+    }
 }

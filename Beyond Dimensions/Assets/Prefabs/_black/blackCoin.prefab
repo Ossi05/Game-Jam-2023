@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 838357167843752519}
   - component: {fileID: 6577735678006708671}
   - component: {fileID: 3076450929127247938}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: blackCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.625, y: 0.625}
+    oldSize: {x: 0.6666667, y: 0.6666667}
     newSize: {x: 0.625, y: 0.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

@@ -141,11 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d7f93449f0304c4b823a4bf7ce15158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSound: {fileID: 8300000, guid: c66cf3f1aec2c2d41aa8e6cd1d78afcc, type: 3}
-  jumpSound: {fileID: 0}
-  deathSound: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 5ccf44f811608304db2a4d1ece9a7935, type: 3}
+  jumpSound: {fileID: 8300000, guid: b18138b264e0a8e4993820890a0132ee, type: 3}
+  deathSound: {fileID: 8300000, guid: cef8e9581b4c99f4899fa04c1ff2ad45, type: 3}
   killSound: {fileID: 0}
-  coinPickUp: {fileID: 0}
+  coinPickUp: {fileID: 8300000, guid: cc4bb5e6356721d4eae797e5de3c2497, type: 3}
   killAudioVolume: 0.5
   JumpAudioVolume: 0.2
   volume: 1

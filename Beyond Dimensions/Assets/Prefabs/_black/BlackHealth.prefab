@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2412129138268904475}
   - component: {fileID: 7738448403447538479}
   - component: {fileID: -7853698415433382890}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BlackHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
