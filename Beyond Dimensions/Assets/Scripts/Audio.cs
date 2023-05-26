@@ -61,10 +61,7 @@ public class Audio : MonoBehaviour
     void PlayAudio(AudioClip audioClip, float volume)
     {   
         if (audioClip != null)
-        {   if(audioSource == null)
-            {
-                audioSource = GetComponent<AudioSource>();
-            }
+        {   
             audioSource.PlayOneShot(audioClip);
         }
         

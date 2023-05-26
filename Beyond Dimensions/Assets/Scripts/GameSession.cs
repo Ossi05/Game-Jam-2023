@@ -3,23 +3,22 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class GameSession : MonoBehaviour
-{
+
+public class GameSession : MonoBehaviour {
     [SerializeField] int playerLives = 3;
     [SerializeField] TextMeshProUGUI livesText;
     Score score;
 
-    
-    void Awake()
-    {      
-        score = FindObjectOfType<Score>();  
+    private void Start()
+    {
+        score = FindObjectOfType<Score>();
+
         if (livesText != null)
         {
             livesText.text = "Lives: " + playerLives.ToString();
         }
-        
+
         int gameSessions = FindObjectsOfType<GameSession>().Length;
         if (gameSessions > 1)
         {
@@ -31,12 +30,8 @@ public class GameSession : MonoBehaviour
         }
     }
 
-    
-
     public void PlayerDeath()
     {
-    
-        
         if (playerLives > 1)
         {
             TakeLife();
@@ -45,25 +40,22 @@ public class GameSession : MonoBehaviour
         {
             ResetGameSession();
         }
-        
-
     }
 
     void TakeLife()
-    {  
+    {
         playerLives--;
         livesText.text = "Lives: " + playerLives.ToString();
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
-        
     }
+
     void ResetGameSession()
     {
-        
         FindObjectOfType<SaveItemState>().ResetScene();
-        SceneManager.LoadScene(1);
+        int lastScene = SceneManager.sceneCountInBuildSettings - 1;
+        SceneManager.LoadScene(lastScene);
         Destroy(gameObject);
-        
     }
 
     public void AddHealth(int health)
@@ -73,26 +65,25 @@ public class GameSession : MonoBehaviour
     }
 
     public void ResetGame()
-    {   
-        
-        
+    {
         if (livesText != null)
         {
             playerLives = 3;
             livesText.text = "Lives: " + playerLives.ToString();
         }
-        
+
         if (score != null)
         {
             score.ResetScore();
         }
+
         SaveItemState saveItemState = FindObjectOfType<SaveItemState>();
 
         if (saveItemState != null)
         {
             saveItemState.ResetScene();
         }
+
         Destroy(gameObject);
     }
-
 }

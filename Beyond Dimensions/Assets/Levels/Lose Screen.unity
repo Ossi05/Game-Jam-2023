@@ -359,24 +359,16 @@ PrefabInstance:
       objectReference: {fileID: 2087655738}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 330258c0c566b454084eb974179d8b4e, type: 3}
---- !u!1001 &1056635218
+--- !u!1001 &1018639359
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8362264366238446776, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8488569785007109872, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
       propertyPath: m_Name
       value: GameSession
-      objectReference: {fileID: 0}
-    - target: {fileID: 8488569785007109872, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8488569785007109874, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
       propertyPath: m_RootOrder
@@ -651,7 +643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1749567514672652291, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_text
-      value: QUit
+      value: Main Menu
       objectReference: {fileID: 0}
     - target: {fileID: 1749567514816897225, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_Pivot.x
@@ -755,15 +747,21 @@ PrefabInstance:
       objectReference: {fileID: 493273037}
     - target: {fileID: 1749567515553726345, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 1749567515579413597, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_text
-      value: Beyond DImension
+      value: 'You Lost!
+
+        Better luck next time!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749567515579413597, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
+      propertyPath: m_fontSize
+      value: 112.45
       objectReference: {fileID: 0}
     - target: {fileID: 1749567516011186394, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_text
-      value: Start
+      value: Restart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}

@@ -19,7 +19,15 @@ public class AddToScore : MonoBehaviour
         if (collision.tag == "Player" && !wasCollected)
         {            
             wasCollected = true;
+            if (audioManager == null)
+            {
+                audioManager = FindObjectOfType<Audio>();
+            }
             audioManager.PlayCoinSound();
+            if (score == null)
+            {
+                score = FindObjectOfType<Score>();
+            }
             score.AddToScore(pointsToAdd);
             Destroy(gameObject);
         }

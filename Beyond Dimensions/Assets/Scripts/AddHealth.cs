@@ -18,8 +18,16 @@ public class AddHealth : MonoBehaviour
     {
         if (collision.tag == "Player" && !wasCollected)
         {   
+            if (audioManager == null)
+            {
+                audioManager = FindObjectOfType<Audio>();
+            }
             audioManager.PlayCoinSound();
             wasCollected = true;
+            if (gameSession == null)
+            {
+                gameSession = FindObjectOfType<GameSession>();
+            }
             gameSession.AddHealth(healthToAdd);
             Destroy(gameObject);
         }

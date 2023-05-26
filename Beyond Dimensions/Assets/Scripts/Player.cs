@@ -116,7 +116,7 @@ public class Player : MonoBehaviour {
 
     public void Death()
     {
-        if (bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Spikes")) )
+        if (bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies", "Spikes")))
         {
             isAlive = false;
             FindAudioManager();
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour {
             {
                 audioManager.PlayDeathSound();
             }
-            
+
             playerAnimator.SetTrigger("Death");
             rb.velocity = death;
             StartCoroutine(DelayedPlayerDeath());
@@ -135,8 +135,8 @@ public class Player : MonoBehaviour {
     IEnumerator DelayedPlayerDeath()
     {   
         yield return new WaitForSecondsRealtime(1);
-        gameSession.PlayerDeath();
-        
+        FindObjectOfType<GameSession>().PlayerDeath();
+
     }
 
     void OnDimension()

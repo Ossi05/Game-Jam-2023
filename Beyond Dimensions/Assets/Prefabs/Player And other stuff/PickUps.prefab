@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6438207104971957945}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: White Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3014429259979005620}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: White Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4515771268740133007}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Black Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2553413094593299345}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Black Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8977361971649832750}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Black Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5210077829987103270}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: White Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5210077830075150326}
   - component: {fileID: 5210077830075150327}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: PickUps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,6 +221,7 @@ Transform:
   m_Children:
   - {fileID: 5210077829987103270}
   - {fileID: 5210077830738158953}
+  - {fileID: 515062283643781371}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -247,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5210077830738158953}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Black Items
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6197199554171434168}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: White Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7056655508299734046}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: White Coins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5668995281140563776}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Black Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,3 +367,69 @@ Transform:
   m_Father: {fileID: 5210077830738158953}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7013567726413452804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5210077830075150326}
+    m_Modifications:
+    - target: {fileID: 7381660214749992701, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_Name
+      value: WorldBorder
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992701, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+--- !u!4 &515062283643781371 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7381660214749992703, guid: 13ca32e17b08f7144937f2c7fc2de7bb, type: 3}
+  m_PrefabInstance: {fileID: 7013567726413452804}
+  m_PrefabAsset: {fileID: 0}

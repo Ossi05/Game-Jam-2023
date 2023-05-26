@@ -35,7 +35,11 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
-        {   
+        {
+            if (audioManager == null)
+            {
+                audioManager = FindObjectOfType<Audio>();
+            }
             audioManager.PlayKillSound();
             effects.PlayExplosion(collision.transform);
             Destroy(collision.gameObject);
