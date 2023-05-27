@@ -144,7 +144,7 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: 5ccf44f811608304db2a4d1ece9a7935, type: 3}
   jumpSound: {fileID: 8300000, guid: b18138b264e0a8e4993820890a0132ee, type: 3}
   deathSound: {fileID: 8300000, guid: cef8e9581b4c99f4899fa04c1ff2ad45, type: 3}
-  killSound: {fileID: 0}
+  killSound: {fileID: 8300000, guid: 2ade07228203ce146bbc8866e0df7b96, type: 3}
   coinPickUp: {fileID: 8300000, guid: cc4bb5e6356721d4eae797e5de3c2497, type: 3}
   killAudioVolume: 0.5
   JumpAudioVolume: 0.2
