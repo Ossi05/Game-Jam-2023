@@ -6,16 +6,20 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 20f;
     [SerializeField] float timeAlive = 5f;
+
     Rigidbody2D rb;
     Player player;
     float speed;
     Effects effects;
     Audio audioManager;
 
+
+
     private void Awake()
     {
         effects = FindObjectOfType<Effects>();
         audioManager = FindObjectOfType<Audio>();
+
     }
     void Start()
     {
@@ -34,6 +38,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.tag == "Enemy")
         {
             if (audioManager == null)
@@ -42,7 +47,11 @@ public class Bullet : MonoBehaviour
             }
             audioManager.PlayKillSound();
             effects.PlayExplosion(collision.transform);
-            Destroy(collision.gameObject);
+            if (collision.gameObject.GetComponent<AddToScore>() != null)
+            {
+                Destroy(collision.gameObject);
+            }
+            
         }
         Destroy(gameObject);
     }

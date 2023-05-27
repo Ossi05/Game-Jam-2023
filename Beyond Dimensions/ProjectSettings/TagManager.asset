@@ -8,6 +8,8 @@ TagManager:
   - WinText
   - Timer
   - Canvas
+  - Coin
+  - Bullet
   layers:
   - Default
   - TransparentFX
