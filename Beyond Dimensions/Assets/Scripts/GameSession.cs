@@ -7,17 +7,18 @@ using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour {
     [SerializeField] int playerLives = 3;
-    [SerializeField] TextMeshProUGUI livesText;
     Score score;
+    UIManager uiManager;
+
 
     private void Start()
-    {
+    {   
+        uiManager = GetComponent<UIManager>();
         score = FindObjectOfType<Score>();
 
-        if (livesText != null)
-        {
-            livesText.text = "Lives: " + playerLives.ToString();
-        }
+        
+        uiManager.UpdateLivesText(playerLives);
+        
 
         int gameSessions = FindObjectsOfType<GameSession>().Length;
         if (gameSessions > 1)
@@ -29,6 +30,8 @@ public class GameSession : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
         }
     }
+
+
 
     public void PlayerDeath()
     {
@@ -45,7 +48,7 @@ public class GameSession : MonoBehaviour {
     void TakeLife()
     {
         playerLives--;
-        livesText.text = "Lives: " + playerLives.ToString();
+        uiManager.UpdateLivesText(playerLives);
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
     }
@@ -61,16 +64,16 @@ public class GameSession : MonoBehaviour {
     public void AddHealth(int health)
     {
         playerLives += health;
-        livesText.text = "Lives: " + playerLives.ToString();
+        uiManager.UpdateLivesText(playerLives);
     }
 
     public void ResetGame()
     {
-        if (livesText != null)
-        {
-            playerLives = 3;
-            livesText.text = "Lives: " + playerLives.ToString();
-        }
+        
+        
+        playerLives = 3;
+        uiManager.UpdateLivesText(playerLives);
+        
 
         if (score != null)
         {
@@ -86,4 +89,6 @@ public class GameSession : MonoBehaviour {
 
         Destroy(gameObject);
     }
+
+
 }

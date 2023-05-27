@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - WinText
+  - Timer
+  - Canvas
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Spikes
   - WorldBorder
   - Items
-  - 
+  - Exit
   - 
   - 
   - 
