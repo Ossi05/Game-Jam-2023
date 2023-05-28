@@ -43,6 +43,12 @@ public class GameSession : MonoBehaviour {
         {
             ResetGameSession();
         }
+
+        DimensionController dimensionController = FindObjectOfType<DimensionController>();
+        if (dimensionController != null)
+        {
+            dimensionController.ResetDimensionController();
+        }
     }
 
     void TakeLife()

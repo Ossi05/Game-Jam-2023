@@ -21,10 +21,6 @@ public class NextLevel : MonoBehaviour
         yield return new WaitForSecondsRealtime(exitTime);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
-        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
-        {
-            nextSceneIndex = 0;
-        }
         FindObjectOfType<SaveItemState>().ResetScene();
         SceneManager.LoadScene(nextSceneIndex);
     }

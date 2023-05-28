@@ -366,6 +366,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8362264366238446776, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362264366238446776, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
+      propertyPath: m_TagString
+      value: Canvas
+      objectReference: {fileID: 0}
     - target: {fileID: 8488569785007109872, guid: 06c84bdf9ee7b6246bb09fdd5e2ac045, type: 3}
       propertyPath: m_Name
       value: GameSession

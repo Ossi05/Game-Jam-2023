@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
         int sceneCount = SceneManager.sceneCountInBuildSettings;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        if (currentSceneIndex == 0 || currentSceneIndex == 7)
+        if (currentSceneIndex == 0 || currentSceneIndex == sceneCount)
         {
             GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
             if (canvas != null)
@@ -72,6 +72,7 @@ public class UIManager : MonoBehaviour
             }
 
         }
+
 
     }
 

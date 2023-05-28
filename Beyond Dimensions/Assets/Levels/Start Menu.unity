@@ -759,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1749567515579413597, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_text
-      value: Beyond DImension
+      value: Beyond DImensions
       objectReference: {fileID: 0}
     - target: {fileID: 1749567516011186394, guid: fa5ae996861d59840a0fb624c92640fd, type: 3}
       propertyPath: m_text

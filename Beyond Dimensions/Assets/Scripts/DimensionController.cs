@@ -10,11 +10,7 @@ public class DimensionController : MonoBehaviour {
     bool blackDimension = false;
     void Awake()
     {
-        SaveItemState saveItemState = FindObjectOfType<SaveItemState>();
-        bullet.color = Color.white;
-        blackObjects.SetActive(false);
-        whiteObjects.SetActive(true);
-        saveItemState.white();
+        ResetDimensionController();
     }
 
 
@@ -49,6 +45,16 @@ public class DimensionController : MonoBehaviour {
     public bool GetDimension()
     {   
         return blackDimension;
+    }
+
+
+    public void ResetDimensionController()
+    {
+        SaveItemState saveItemState = FindObjectOfType<SaveItemState>();
+        bullet.color = Color.white;
+        blackObjects.SetActive(false);
+        whiteObjects.SetActive(true);
+        saveItemState.white();
     }
 }
     
