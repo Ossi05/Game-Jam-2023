@@ -47,8 +47,8 @@ public class Bullet : MonoBehaviour
             }
             audioManager.PlayKillSound();
             effects.PlayExplosion(collision.transform);
-            if (collision.gameObject.GetComponent<AddToScore>() != null)
-            {
+            if (collision.gameObject.GetComponent<AddToScore>() == null)
+            {               
                 Destroy(collision.gameObject);
             }
             
