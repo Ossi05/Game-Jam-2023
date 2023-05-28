@@ -2,15 +2,19 @@
 The GameDev.tv Game Jam 2023
 
 Game Design and Development:
+
 [Ossi](https://github.com/Ossi05)
 
 Level Design:
+
 Ossi
 
 Programming:
+
 [Ossi](https://github.com/Ossi05)
 
 Sound Design:
+
 [Fuse](https://github.com/fusee1) (Free assets)
 
 Special Thanks:
