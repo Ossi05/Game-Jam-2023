@@ -15,7 +15,7 @@ Special Thanks:
 
 Fuse for finding cool sounds and music for the game
 
-![image](https://github.com/Ossi05/Game-Jam-2023/assets/77546709/99eddf50-3c40-46c0-a348-2bebb19b9e80)
+![image](https://github.com/Ossi05/Game-Jam-2023/assets/77546709/a817ed62-98a7-4ab9-b77a-ad15bfe308e7)
 
 
 The assets are from:
