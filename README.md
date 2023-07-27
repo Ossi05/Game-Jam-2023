@@ -1,7 +1,7 @@
 # Game-Jam-2023
 The GameDev.tv Game Jam 2023
 
-You can play the game https://ossi-05.itch.io/beyond-dimensions
+You can play the game at https://ossi-05.itch.io/beyond-dimensions
 
 # Beyond Dimension 
 
